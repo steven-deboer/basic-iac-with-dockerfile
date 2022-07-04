@@ -5,7 +5,7 @@ MAINTAINER Sergey Zhukov, sergey@jetbrains.com
 ENV LOG4J_VER 1.2.17
 ENV LOG4J_BIN log4j-${LOG4J_VER}.tar.gz
 
-# Download appropriate juli libs
+# Download appropriate juli lib
 RUN URL=`curl https://tomcat.apache.org/download-60.cgi | \
 	grep Browse | grep -v www.apache.org | sed "s#.*href=\"\(.*${TOMCAT_VER}\)\".*#\1#"` && \
 	wget -O /home/tomcat/apache-tomcat-current/bin/tomcat-juli.jar ${URL}/bin/extras/tomcat-juli.jar && \
